@@ -53,7 +53,7 @@ func main(){
 	}
 	
 	for i := range 10{
-		nodes = append(nodes, Node{i, -1, chans[i], chans[((i - 1) + 10) % 10], false, false})
+		nodes = append(nodes, Node{i ^ 1, -1, chans[i], chans[((i - 1) + 10) % 10], false, false})
 	}
 
 	var wg sync.WaitGroup
